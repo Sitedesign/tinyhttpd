@@ -524,6 +524,11 @@ int main(void)
 		{
 			perror("pthread_create");
 		}
+		
+		if (pthread_detach(newthread) != 0)
+		{
+			perror("pthread_detach");
+		}
 	}
 
 	close(server_sock);
